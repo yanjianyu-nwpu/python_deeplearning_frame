@@ -33,7 +33,11 @@ class Square(Function):
     
     def backforward(self,dy):      
         assert len(dy) == 1        
-        dy = dy[0]        
+        dy = dy[0]       
+        print("NNN") 
+        print(dy)
+        print(self.inputs)
+        print([2*self.inputs[0]*dy])
         return [2*self.inputs[0]*dy]
 
 def square(x):    

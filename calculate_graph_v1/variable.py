@@ -25,9 +25,9 @@ class Variable:
             gradList = f.backforward(preGrads)            
             for v,grad in zip(f.raw_inputs,gradList):                
                 v.grad = v.grad + grad                        
-                for v in f.raw_inputs:                
-                    if v.creator == None:                    
-                        continue                
-                    funcs.append(v.creator)            
+            for v in f.raw_inputs:                
+                if v.creator == None:                    
+                    continue                
+                funcs.append(v.creator)            
             funcs.sort(key= generation)                         
         return      
